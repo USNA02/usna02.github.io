@@ -22,11 +22,33 @@
     <header class="page-intro"><div class="page"><p class="kicker">Contact</p><h1 class="title">A gig link, a repository, or an email.</h1><p class="lede">Use this portfolio on Fiverr and other platforms. GitHub is the evidence. Email is how a new piece of work starts.</p></div></header>
     <section class="band contact-band"><div class="page channels">
       <article class="channel"><p class="kicker" style="color:var(--accent)">Channel</p><h2 class="serif">GitHub</h2><p>The cereals project, the SQL job-market queries, and the rest of the public work.</p><a class="btn btn-quiet" href="https://github.com/USNA02">Visit GitHub</a></article>
-      <article class="channel"><p class="kicker" style="color:var(--accent)">Channel</p><h2 class="serif">Email</h2><p>A dataset to analyse, or a business question that needs a clearer reading of the numbers.</p><a class="btn btn-accent" href="mailto:Tesbranon34@gmail.com">Send an email</a></article>
+      <article class="channel"><p class="kicker" style="color:var(--accent)">Channel</p><h2 class="serif">Email</h2><p>A dataset to analyse, or a business question that needs a clearer reading of the numbers.</p><a class="btn btn-accent" href="mailto:Testbaron34@gmail.com">Send an email</a></article>
     </div></section>
     <section class="band"><div class="page contact-grid">
       <div><h2 class="serif" style="font-size:1.8rem">What helps me answer</h2><ul class="includes"><li>The decision the number has to support.</li><li>What the data is, and whether it can be shared.</li><li>A date, and the format you need back: table, query, or a page.</li></ul><p class="limit">Public site: <a href="https://usna02.github.io/">usna02.github.io</a>. Profile: <a href="https://github.com/USNA02">github.com/USNA02</a>.</p></div>
-      <form class="card form" action="mailto:Tesbranon34@gmail.com" method="post" enctype="text/plain"><h2 class="serif" style="font-size:1.8rem">Write the note</h2><p class="muted">This opens your mail app with the message filled in. Nothing is stored on the site.</p><label>Name<input name="name" required autocomplete="name"></label><label>Email<input name="email" type="email" required autocomplete="email"></label><label>What has to be decided?<textarea name="body" required></textarea></label><button class="btn btn-solid" type="submit">Open email</button></form>
+      <form class="card form" id="enquiry">
+        <h2 class="serif" style="font-size:1.8rem">Write the note</h2>
+        <p class="muted">This opens your mail app with the message filled in. Nothing is stored on the site. It is addressed to <a href="mailto:Testbaron34@gmail.com">usna02</a>.</p>
+        <label>Name<input name="name" required autocomplete="name"></label>
+        <label>Email<input name="email" type="email" required autocomplete="email"></label>
+        <label>What has to be decided?<textarea name="body" required></textarea></label>
+        <button class="btn btn-solid" type="submit">Open email</button>
+        <p id="mail-status" class="muted" role="status" hidden>If your mail app opened, send the message from there.</p>
+      </form>
+      <script>
+        document.getElementById("enquiry").addEventListener("submit", function (event) {
+          event.preventDefault();
+          var data = new FormData(event.currentTarget);
+          var name = String(data.get("name") || "").trim();
+          var email = String(data.get("email") || "").trim();
+          var note = String(data.get("body") || "").trim();
+          var nl = String.fromCharCode(10);
+          var subject = encodeURIComponent("Portfolio enquiry from " + name);
+          var body = encodeURIComponent(note + nl + nl + "— " + name + nl + email);
+          window.location.href = "mailto:Testbaron34@gmail.com?subject=" + subject + "&body=" + body;
+          document.getElementById("mail-status").hidden = false;
+        });
+      </script>
     </div></section>
     <section class="band wash"><div class="page"><p class="kicker">Before you hire</p><h2 class="title">Straight answers</h2><dl class="faq"><div><dt>Can I link this from Fiverr, Upwork, or LinkedIn?</dt><dd>Yes. Use https://usna02.github.io/ as the work sample and GitHub as the files. On a gig, say what is included, how long it takes, and what you need from the buyer. Do not promise a result the data cannot support.</dd></div><div><dt>Do you invent client logos or testimonials?</dt><dd>No. The public work is the cereals series and the analyst job-market queries. If a figure is not in those repositories, it is not on this site.</dd></div><div><dt>What should I send before we start?</dt><dd>The decision the number has to support, what the data is, whether it can be shared, and a date. A tool name is not a brief.</dd></div><div><dt>Which tools do you work in?</dt><dd>Excel and PostgreSQL now, with Python and Pandas for preparation and exploration. Power BI and Tableau are part of the reporting toolkit as it grows. Git holds the work.</dd></div></dl></div></section>
   </main>
