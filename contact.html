@@ -7,27 +7,50 @@
   <title>Contact · Addis</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,560;9..144,640&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,560;9..144,640&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <a class="skip" href="#content">Skip to content</a>
   <div class="accent-bar" aria-hidden="true"></div>
   <header class="site-header">
-    <a class="brand" href="index.html"><span class="mark" aria-hidden="true">A</span><span><strong>Addis</strong><small>Data Analysis &amp; Business Intelligence</small></span></a>
-    <input class="nav-toggle" type="checkbox" id="nav-toggle"><label class="nav-btn" for="nav-toggle">Menu</label>
-    <nav aria-label="Primary"><a href="index.html">Home</a><a href="services.html">Services</a><a href="portfolio.html">Portfolio</a><a href="about.html">About</a><a href="insights.html">Insights</a><a href="contact.html" aria-current="page">Contact</a></nav>
+    <a class="brand" href="index.html">
+      <span class="mark" aria-hidden="true">A</span>
+      <span>
+        <strong>Addis</strong>
+        <small>Data Analysis & Business Intelligence</small>
+      </span>
+    </a>
+    <input class="nav-toggle" type="checkbox" id="nav-toggle">
+    <label class="nav-btn" for="nav-toggle">Menu</label>
+    <nav aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="about.html">About</a>
+        <a href="insights.html">Insights</a>
+        <a href="contact.html" aria-current="page">Contact</a>
+    </nav>
   </header>
   <main id="content">
-    <header class="page-intro"><div class="page"><p class="kicker">Contact</p><h1 class="title">A repository, or an email.</h1><p class="lede">This site is the portfolio. GitHub is the evidence. Email is how a new piece of work starts.</p></div></header>
+
+    <header class="page-intro"><div class="page">
+      <p class="kicker">Contact</p>
+      <h1 class="title">A repository, or an email.</h1>
+      <p class="lede">This site is the portfolio. GitHub is the evidence. Email is how a new piece of work starts.</p>
+    </div></header>
     <section class="band contact-band"><div class="page channels">
       <article class="channel"><p class="kicker" style="color:var(--accent)">Channel</p><h2 class="serif">GitHub</h2><p>The cereals project, the SQL job-market queries, and the rest of the public work.</p><a class="btn btn-quiet" href="https://github.com/USNA02">Visit GitHub</a></article>
       <article class="channel"><p class="kicker" style="color:var(--accent)">Channel</p><h2 class="serif">Email</h2><p>A dataset to analyse, or a business question that needs a clearer reading of the numbers.</p><a class="btn btn-accent" href="mailto:Testbaron34@gmail.com">Send an email</a></article>
     </div></section>
     <section class="band"><div class="page contact-grid">
-      <div><h2 class="serif" style="font-size:1.8rem">What helps me answer</h2><ul class="includes"><li>The decision the number has to support.</li><li>What the data is, and whether it can be shared.</li><li>A date, and the format you need back: table, query, or a page.</li></ul><p class="limit">Public site: <a href="https://usna02.github.io/">usna02.github.io</a>. Profile: <a href="https://github.com/USNA02">github.com/USNA02</a>.</p></div>
+      <div>
+        <h2 class="serif case-title">What helps me answer</h2>
+        <ul class="includes"><li>The decision the number has to support.</li><li>What the data is, and whether it can be shared.</li><li>A date, and the format you need back: table, query, or a page.</li></ul>
+        <p class="limit">Public site: <a href="https://usna02.github.io/">usna02.github.io</a>. Profile: <a href="https://github.com/USNA02">github.com/USNA02</a>.</p>
+      </div>
       <form class="card form" id="enquiry">
-        <h2 class="serif" style="font-size:1.8rem">Write the note</h2>
+        <h2 class="serif case-title">Write the note</h2>
         <p class="muted">This opens your mail app with the message filled in. Nothing is stored on the site. It is addressed to <a href="mailto:Testbaron34@gmail.com">usna02</a>.</p>
         <label>Name<input name="name" required autocomplete="name"></label>
         <label>Email<input name="email" type="email" required autocomplete="email"></label>
@@ -44,14 +67,41 @@
           var note = String(data.get("body") || "").trim();
           var nl = String.fromCharCode(10);
           var subject = encodeURIComponent("Portfolio enquiry from " + name);
-          var body = encodeURIComponent(note + nl + nl + "— " + name + nl + email);
+          var body = encodeURIComponent(note + nl + nl + "\u2014 " + name + nl + email);
           window.location.href = "mailto:Testbaron34@gmail.com?subject=" + subject + "&body=" + body;
-          document.getElementById("mail-status").hidden = false;
+          var status = document.getElementById("mail-status");
+          status.hidden = false;
         });
       </script>
     </div></section>
-    <section class="band wash"><div class="page"><p class="kicker">Before you hire</p><h2 class="title">Straight answers</h2><dl class="faq"><div><dt>Where does a new piece of work start?</dt><dd>By email. Say what has to be decided, what the data is, whether it can be shared, and the date you need it. The public projects on this site are the work sample. A result the data cannot support will not be promised.</dd></div><div><dt>Do you invent client logos or testimonials?</dt><dd>No. The public work is the cereals series and the analyst job-market queries. If a figure is not in those repositories, it is not on this site.</dd></div><div><dt>What should I send before we start?</dt><dd>The decision the number has to support, what the data is, whether it can be shared, and a date. A tool name is not a brief.</dd></div><div><dt>Which tools do you work in?</dt><dd>Excel and PostgreSQL now, with Python and Pandas for preparation and exploration. Power BI and Tableau are part of the reporting toolkit as it grows. Git holds the work.</dd></div></dl></div></section>
+    <section class="band wash"><div class="page">
+      <p class="kicker">Before you hire</p>
+      <h2 class="title">Straight answers</h2>
+      <dl class="faq">
+        <div><dt>Where does a new piece of work start?</dt><dd>By email. Say what has to be decided, what the data is, whether it can be shared, and the date you need it. The public projects on this site are the work sample. A result the data cannot support will not be promised.</dd></div>
+        <div><dt>Do you invent client logos or testimonials?</dt><dd>No. The public work is the cereals series and the analyst job-market queries. If a figure is not in those repositories, it is not on this site.</dd></div>
+        <div><dt>What should I send before we start?</dt><dd>The decision the number has to support, what the data is, whether it can be shared, and a date. A tool name is not a brief.</dd></div>
+        <div><dt>Which tools do you work in?</dt><dd>Excel and PostgreSQL now, with Python and Pandas for preparation and exploration. Power BI and Tableau are part of the reporting toolkit as it grows. Git holds the work.</dd></div>
+      </dl>
+    </div></section>
+
   </main>
-  <footer class="site-footer"><div class="page footer-row"><div><p class="footer-name">Addis</p><p>Data Analysis &amp; Business Intelligence</p></div><nav aria-label="Footer"><a href="index.html">Home</a><a href="services.html">Services</a><a href="portfolio.html">Portfolio</a><a href="about.html">About</a><a href="insights.html">Insights</a><a href="contact.html" aria-current="page">Contact</a></nav></div><p class="legal">&copy; 2026 Addis | Data Analysis &amp; Business Intelligence. Built with HTML, CSS and GitHub Pages.</p></footer>
+  <footer class="site-footer">
+    <div class="page footer-row">
+      <div>
+        <p class="footer-name">Addis</p>
+        <p>Data Analysis & Business Intelligence</p>
+      </div>
+      <nav aria-label="Footer">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="about.html">About</a>
+        <a href="insights.html">Insights</a>
+        <a href="contact.html" aria-current="page">Contact</a>
+      </nav>
+    </div>
+    <p class="legal">&copy; 2026 Addis | Data Analysis & Business Intelligence. Built with HTML, CSS and GitHub Pages.</p>
+  </footer>
 </body>
 </html>
