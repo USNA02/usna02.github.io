@@ -7,24 +7,90 @@
   <title>Portfolio · Addis</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,560;9..144,640&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,560;9..144,640&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <a class="skip" href="#content">Skip to content</a>
   <div class="accent-bar" aria-hidden="true"></div>
   <header class="site-header">
-    <a class="brand" href="index.html"><span class="mark" aria-hidden="true">A</span><span><strong>Addis</strong><small>Data Analysis &amp; Business Intelligence</small></span></a>
-    <input class="nav-toggle" type="checkbox" id="nav-toggle"><label class="nav-btn" for="nav-toggle">Menu</label>
-    <nav aria-label="Primary"><a href="index.html">Home</a><a href="services.html">Services</a><a href="portfolio.html" aria-current="page">Portfolio</a><a href="about.html">About</a><a href="insights.html">Insights</a><a href="contact.html">Contact</a></nav>
+    <a class="brand" href="index.html">
+      <span class="mark" aria-hidden="true">A</span>
+      <span>
+        <strong>Addis</strong>
+        <small>Data Analysis & Business Intelligence</small>
+      </span>
+    </a>
+    <input class="nav-toggle" type="checkbox" id="nav-toggle">
+    <label class="nav-btn" for="nav-toggle">Menu</label>
+    <nav aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="portfolio.html" aria-current="page">Portfolio</a>
+        <a href="about.html">About</a>
+        <a href="insights.html">Insights</a>
+        <a href="contact.html">Contact</a>
+    </nav>
   </header>
   <main id="content">
-    <header class="page-intro"><div class="page"><p class="kicker">Portfolio</p><h1 class="title">Two public projects, with the limit written down.</h1><p class="lede">Kenya cereals since 2000, and a SQL reading of remote data-analyst postings.</p></div></header>
+
+    <header class="page-intro"><div class="page">
+      <p class="kicker">Portfolio</p>
+      <h1 class="title">Two public projects, with the limit written down.</h1>
+      <p class="lede">Kenya cereals since 2000, and a SQL reading of remote data-analyst postings.</p>
+    </div></header>
     <div class="page">
-      <article class="case" id="kenya-cereals"><div class="mark-panel" style="min-height:16rem;font-size:2rem;padding:1.5rem;text-align:center">Cereals<br>2000–2024</div><div><p class="kicker">Agriculture · SQL and Python</p><h2 class="serif" style="font-size:2rem">Kenya Cereals Open Data Analysis</h2><p><strong>SQL · PostgreSQL · Python</strong></p><p>How have Kenya's cereal harvest, cereal yield, and the gap between agricultural jobs and agricultural GDP moved since 2000?</p><div class="facts"><div class="fact"><strong>4.98 million t</strong><span>2024 harvest</span></div><div class="fact"><strong>1.693 t/ha</strong><span>2024 yield</span></div><div class="fact"><strong>46.5% / 22.5%</strong><span>Jobs vs GDP</span></div></div><p class="result">In 2024 Kenya produced 4,978,020 tonnes of cereals. Yield was 1.693 tonnes per hectare. Agriculture was 46.5% of employment and 22.5% of GDP.</p><p>The grain is a country, an indicator, and a year. Production, yield, area, fertiliser, rural population, agricultural employment, and agricultural GDP stay in a long table so a chart cannot mix two meanings of cereals.</p><p>Python fetches and tidies the series. PostgreSQL holds kenya.observation. Five queries cover the latest Kenya values, the 2014–2024 harvest and yield, an East Africa yield ranking for 2024, employment against GDP, and a check that production divided by yield matches reported area.</p><p>The 2024 harvest is higher than 2014 (4,227,113 tonnes) and lower than the 2023 high of 5,145,991 tonnes. Yield in 2014 was 1.583 tonnes per hectare; 2020 reached 1.843 and 2022 fell to 1.477. Among Ethiopia, Uganda, Tanzania, Rwanda, and Kenya in this file, Kenya's 2024 yield is the lowest of the five, not an average of them.</p><p>In 2000 agriculture was 60.4% of employment and 28.7% of GDP. Employment's share has fallen. It is still about twice the GDP share. That comparison is not a productivity score.</p><p class="limit"><strong>Limit.</strong> Modelled national series, CC BY 4.0, cited to the World Bank and Our World in Data. Not prices, not a farm survey, and not a measure of farm efficiency. The 2024 harvested area was unpublished and left blank.</p><p style="margin-top:1rem"><a class="btn btn-line" href="https://github.com/USNA02/kenya-cereals-open-data">View project on GitHub</a></p></div></article>
-      <article class="case" id="analyst-jobs"><div class="mark-panel" style="min-height:16rem;font-size:2rem;padding:1.5rem;text-align:center">SQL<br>job market</div><div><p class="kicker">Labour market · PostgreSQL</p><h2 class="serif" style="font-size:2rem">Data Analyst Job Market</h2><p><strong>SQL · PostgreSQL · Git</strong></p><p>Which remote data-analyst roles pay more, which skills are asked for, and which skills sit beside higher posted salaries?</p><div class="facts"><div class="fact"><strong>Five SQL cuts</strong><span>Questions</span></div><div class="fact"><strong>PostgreSQL</strong><span>Database</span></div><div class="fact"><strong>SQL</strong><span>Lead skill</span></div></div><p class="result">In this dataset SQL leads both demand and the skills associated with higher pay. A skill that is merely common is kept on a different list from a skill with a higher average salary.</p><p>The repository asks, in order: the top-paying data analyst jobs, the skills those jobs require, the skills in demand, the skills associated with higher salaries, and the most useful skills to learn.</p><p>The work is joins across job postings, companies, and skills, with filters for analyst titles, remote location, and salaries that are actually filled in. The SQL stays in project_sql so a different filter can be argued with.</p><p>Posted salaries in the top remote slice of that file span a very wide range, including titles well above a standard analyst role. That spread is a property of the dataset. It is not a quote for a local engagement.</p><p class="limit"><strong>Limit.</strong> Remote postings in the file, not a Kenya salary survey and not a personal earnings claim. Niche skills can show a high average on very few roles. The queries are the evidence.</p><p style="margin-top:1rem"><a class="btn btn-line" href="https://github.com/USNA02/SQL_Project_Data_Job_Analysis">View project on GitHub</a></p></div></article>
+      <article class="case" id="kenya-cereals">
+        <div class="mark-panel" style="min-height:16rem;font-size:2rem;padding:1.5rem;text-align:center">Cereals<br>2000–2024</div>
+        <div>
+          <p class="kicker">Agriculture · SQL and Python</p>
+          <h2 class="serif case-title">Kenya Cereals Open Data Analysis</h2>
+          <p><strong>SQL · PostgreSQL · Python</strong></p>
+          <div class="facts"><div class="fact"><strong>4.98 million t</strong><span>2024 harvest</span></div><div class="fact"><strong>1.693 t/ha</strong><span>2024 yield</span></div><div class="fact"><strong>46.5% / 22.5%</strong><span>Jobs vs GDP</span></div></div>
+          <dl class="beats">
+            <div><dt>Question</dt><dd>How have Kenya's cereal harvest, cereal yield, and the gap between agricultural jobs and agricultural GDP moved since 2000?</dd></div>
+            <div><dt>Method</dt><dd>The grain is a country, an indicator, and a year. Production, yield, area, fertiliser, rural population, agricultural employment, and agricultural GDP stay in a long table so a chart cannot mix two meanings of cereals. Python fetches and tidies the series. PostgreSQL holds kenya.observation. Five queries cover the latest Kenya values, the 2014–2024 harvest and yield, an East Africa yield ranking for 2024, employment against GDP, and a check that production divided by yield matches reported area.</dd></div>
+            <div><dt>Finding</dt><dd>In 2024 Kenya produced 4,978,020 tonnes of cereals. Yield was 1.693 tonnes per hectare. Agriculture was 46.5% of employment and 22.5% of GDP. The 2024 harvest is higher than 2014 (4,227,113 tonnes) and lower than the 2023 high of 5,145,991 tonnes. Yield in 2014 was 1.583 tonnes per hectare; 2020 reached 1.843 and 2022 fell to 1.477. Among Ethiopia, Uganda, Tanzania, Rwanda, and Kenya in this file, Kenya's 2024 yield is the lowest of the five, not an average of them. In 2000 agriculture was 60.4% of employment and 28.7% of GDP. Employment's share has fallen. It is still about twice the GDP share. That comparison is not a productivity score.</dd></div>
+          </dl>
+          <p class="limit"><strong>Limit.</strong> Modelled national series, CC BY 4.0, cited to the World Bank and Our World in Data. Not prices, not a farm survey, and not a measure of farm efficiency. The 2024 harvested area was unpublished and left blank.</p>
+          <p style="margin-top:1rem"><a class="btn btn-line" href="https://github.com/USNA02/kenya-cereals-open-data">View project on GitHub</a></p>
+        </div>
+      </article>
+      <article class="case" id="analyst-jobs">
+        <div class="mark-panel" style="min-height:16rem;font-size:2rem;padding:1.5rem;text-align:center">SQL<br>job market</div>
+        <div>
+          <p class="kicker">Labour market · PostgreSQL</p>
+          <h2 class="serif case-title">Data Analyst Job Market</h2>
+          <p><strong>SQL · PostgreSQL · Git</strong></p>
+          <div class="facts"><div class="fact"><strong>Five SQL cuts</strong><span>Questions</span></div><div class="fact"><strong>PostgreSQL</strong><span>Database</span></div><div class="fact"><strong>SQL</strong><span>Lead skill</span></div></div>
+          <dl class="beats">
+            <div><dt>Question</dt><dd>Which remote data-analyst roles pay more, which skills are asked for, and which skills sit beside higher posted salaries?</dd></div>
+            <div><dt>Method</dt><dd>The repository asks, in order: the top-paying data analyst jobs, the skills those jobs require, the skills in demand, the skills associated with higher salaries, and the most useful skills to learn. The work is joins across job postings, companies, and skills, with filters for analyst titles, remote location, and salaries that are actually filled in. The SQL stays in project_sql so a different filter can be argued with.</dd></div>
+            <div><dt>Finding</dt><dd>In this dataset SQL leads both demand and the skills associated with higher pay. A skill that is merely common is kept on a different list from a skill with a higher average salary. Posted salaries in the top remote slice span a very wide range, including titles well above a standard analyst role. That spread is a property of the dataset. It is not a quote for a local engagement.</dd></div>
+          </dl>
+          <p class="limit"><strong>Limit.</strong> Remote postings in the file, not a Kenya salary survey and not a personal earnings claim. Niche skills can show a high average on very few roles. The queries are the evidence.</p>
+          <p style="margin-top:1rem"><a class="btn btn-line" href="https://github.com/USNA02/SQL_Project_Data_Job_Analysis">View project on GitHub</a></p>
+        </div>
+      </article>
     </div>
+
   </main>
-  <footer class="site-footer"><div class="page footer-row"><div><p class="footer-name">Addis</p><p>Data Analysis &amp; Business Intelligence</p></div><nav aria-label="Footer"><a href="index.html">Home</a><a href="services.html">Services</a><a href="portfolio.html" aria-current="page">Portfolio</a><a href="about.html">About</a><a href="insights.html">Insights</a><a href="contact.html">Contact</a></nav></div><p class="legal">&copy; 2026 Addis | Data Analysis &amp; Business Intelligence. Built with HTML, CSS and GitHub Pages.</p></footer>
+  <footer class="site-footer">
+    <div class="page footer-row">
+      <div>
+        <p class="footer-name">Addis</p>
+        <p>Data Analysis & Business Intelligence</p>
+      </div>
+      <nav aria-label="Footer">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="portfolio.html" aria-current="page">Portfolio</a>
+        <a href="about.html">About</a>
+        <a href="insights.html">Insights</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+    <p class="legal">&copy; 2026 Addis | Data Analysis & Business Intelligence. Built with HTML, CSS and GitHub Pages.</p>
+  </footer>
 </body>
 </html>
