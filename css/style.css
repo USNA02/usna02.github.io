@@ -1,0 +1,322 @@
+
+/* =================================
+   1. GLOBAL DESIGN VARIABLES
+================================= */
+
+:root {
+    --primary-color: #142B4A;
+    --secondary-color: #0F766E;
+    --accent-color: #14B8A6;
+
+    --background-color: #F8FAFC;
+    --surface-color: #FFFFFF;
+
+    --text-color: #243247;
+    --muted-color: #64748B;
+    --border-color: #E2E8F0;
+
+    --font-family: Arial, Helvetica, sans-serif;
+
+    --container-width: 1100px;
+}
+
+
+/* =================================
+   2. BASIC RESET
+================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =================================
+   3. GLOBAL PAGE STYLING
+================================= */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.7;
+}
+
+a {
+    text-decoration: none;
+    color: var(--secondary-color);
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+
+/* =================================
+   4. REUSABLE PAGE CONTAINER
+================================= */
+
+header,
+main,
+footer {
+    width: 100%;
+}
+
+section {
+    padding: 80px 20px;
+}
+
+section > * {
+    max-width: var(--container-width);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* =================================
+   5. HEADER AND NAVIGATION
+================================= */
+
+header {
+    background-color: var(--surface-color);
+    border-bottom: 1px solid var(--border-color);
+    padding: 18px 6%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+header > div a {
+    color: var(--primary-color);
+    font-size: 20px;
+    font-weight: 700;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+nav a {
+    color: var(--text-color);
+    font-size: 14px;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: var(--secondary-color);
+}
+
+
+/* =================================
+   6. HERO SECTION
+================================= */
+
+#home {
+    background-color: var(--primary-color);
+    color: var(--surface-color);
+    padding: 110px 20px;
+    text-align: center;
+}
+
+#home p:first-child {
+    color: var(--accent-color);
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+#home h1 {
+    max-width: 850px;
+    font-size: clamp(36px, 5vw, 58px);
+    line-height: 1.15;
+    margin: 0 auto 25px;
+}
+
+#home p:not(:first-child) {
+    max-width: 720px;
+    color: #DCE6F2;
+    margin: 0 auto 18px;
+}
+
+#home a {
+    display: inline-block;
+    background-color: var(--accent-color);
+    color: #102A35;
+    padding: 13px 24px;
+    margin: 18px 6px 0;
+    border-radius: 5px;
+    font-weight: 700;
+    transition: background-color 0.3s ease;
+}
+
+#home a:hover {
+    background-color: #FFFFFF;
+}
+
+
+/* =================================
+   7. GENERAL SECTION HEADINGS
+================================= */
+
+section h2 {
+    color: var(--primary-color);
+    font-size: 32px;
+    margin-bottom: 18px;
+    text-align: center;
+}
+
+section > p {
+    color: var(--muted-color);
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+
+/* =================================
+   8. SERVICE AND PROJECT CARDS
+================================= */
+
+#services article,
+#portfolio article {
+    background-color: var(--surface-color);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 28px;
+    margin: 20px auto;
+    max-width: var(--container-width);
+    box-shadow: 0 4px 15px rgba(20, 43, 74, 0.04);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#services article:hover,
+#portfolio article:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 22px rgba(20, 43, 74, 0.10);
+}
+
+article h3 {
+    color: var(--primary-color);
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+article p {
+    color: var(--muted-color);
+}
+
+
+/* =================================
+   9. ABOUT SECTION
+================================= */
+
+#about {
+    background-color: #EDF3F8;
+}
+
+#about p {
+    max-width: 800px;
+    margin: 15px auto;
+    color: var(--text-color);
+}
+
+
+/* =================================
+   10. CONTACT SECTION
+================================= */
+
+#contact {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+}
+
+#contact h2 {
+    color: white;
+}
+
+#contact p {
+    color: #DCE6F2;
+}
+
+#contact a {
+    display: inline-block;
+    margin: 12px 8px;
+    padding: 12px 22px;
+    background-color: var(--accent-color);
+    color: #102A35;
+    border-radius: 5px;
+    font-weight: 700;
+}
+
+
+/* =================================
+   11. FOOTER
+================================= */
+
+footer {
+    background-color: #0D1F35;
+    color: #CBD5E1;
+    text-align: center;
+    padding: 25px 15px;
+    font-size: 13px;
+}
+
+
+/* =================================
+   12. RESPONSIVE DESIGN
+================================= */
+
+@media (max-width: 768px) {
+
+    header {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    nav ul {
+        justify-content: center;
+        gap: 15px;
+    }
+
+    nav a {
+        font-size: 13px;
+    }
+
+    section {
+        padding: 55px 18px;
+    }
+
+    #home {
+        padding: 75px 18px;
+    }
+
+    #home h1 {
+        font-size: 36px;
+    }
+
+    section h2 {
+        font-size: 27px;
+    }
+
+    #services article,
+    #portfolio article {
+        padding: 22px;
+    }
+}
