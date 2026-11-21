@@ -1,51 +1,24 @@
-
 # Data Analytics & Business Solutions Portfolio
 
-## Overview
+Professional portfolio for Addis: data cleaning, SQL and PostgreSQL analysis, exploratory analysis, and reporting.
 
-A professional portfolio showcasing data analytics, business intelligence, research, and data-driven business solutions.
+Live site: https://usna02.github.io/
 
-This website demonstrates my ability to transform raw data into actionable insights through data cleaning, SQL analysis, exploratory data analysis, reporting, and visualization.
+## Pages
 
-## Professional Profile
+- index.html
+- services.html
+- portfolio.html
+- about.html
+- insights.html
+- contact.html
+- css/style.css
 
-Data Analyst with a BSc in Information Science.
+## Public projects
 
-## Technical Skills
-
-- Excel
-- PostgreSQL / SQL
-- Python / Pandas
-- Power BI
-- Tableau
-- Git and GitHub
-
-## Services
-
-- Data cleaning and preparation
-- SQL and PostgreSQL analysis
-- Excel data analysis and reporting
-- Exploratory data analysis
-- Business intelligence and visualization
-- Research and technical documentation
-
-## Portfolio Projects
-
-1. Kenya Cereals Open Data Analysis
-2. Additional analytical projects coming soon.
-
-## Website Technology
-
-- HTML5
-- CSS3
-- JavaScript
-- Git
-- GitHub Pages
+1. Kenya Cereals Open Data Analysis — https://github.com/USNA02/kenya-cereals-open-data
+2. Data Analyst Job Market — https://github.com/USNA02/SQL_Project_Data_Job_Analysis
 
 ## Author
 
 Addis
-
-## Website
-
-https://usna02.github.io/
